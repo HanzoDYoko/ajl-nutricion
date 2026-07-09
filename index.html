@@ -217,6 +217,20 @@
   .plan .alt-link{display:block;text-align:center;margin-top:10px;font-size:.8rem;color:var(--gris);text-decoration:underline}
 
   .nota-planes{text-align:center;color:var(--gris);font-size:.88rem;margin-top:26px}
+  .nota-tarjeta{text-align:center;color:var(--verde-osc);font-size:.9rem;font-weight:600;margin-top:12px}
+  .nota-tarjeta a{color:var(--dorado-osc);text-decoration:underline}
+
+  /* ---------- Formas de pago ---------- */
+  .pagos{background:#fff}
+  .metodos-pago{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+  .metodo-pago{background:var(--crema);border:1px solid #ece7de;border-radius:var(--radio);padding:26px;text-align:center}
+  .metodo-pago .ic{font-size:1.8rem;margin-bottom:8px}
+  .metodo-pago h3{font-size:1.15rem;color:var(--verde-osc);margin-bottom:8px}
+  .metodo-pago .tag{display:inline-block;font-weight:800;font-size:.8rem;padding:3px 12px;border-radius:999px;margin-bottom:12px}
+  .metodo-pago .tag.sin{background:var(--verde-claro);color:var(--verde)}
+  .metodo-pago .tag.con{background:var(--dorado-claro);color:var(--dorado-osc)}
+  .metodo-pago p{font-size:.92rem;color:var(--texto);margin-bottom:4px}
+  .metodo-pago .dato{font-family:'Inter';font-weight:800;color:var(--verde-osc);font-size:1.05rem;letter-spacing:.3px}
 
   /* ---------- Método ---------- */
   .metodo{background:var(--verde-osc);color:#fff}
@@ -489,6 +503,7 @@
     </div>
 
     <p class="nota-planes">El plan Básico mantiene su precio regular por ser el plan de entrada. La evaluación inicial cuesta S/80 y se descuenta de tu primer mes si continúas.</p>
+    <p class="nota-tarjeta">💳 El pago con tarjeta tiene 5% de recargo. Sin recargo pagando por <a href="#pagos">Yape o transferencia</a>.</p>
   </div>
 </section>
 
@@ -556,6 +571,44 @@
       </div>
 
     </div>
+    <p class="nota-tarjeta">💳 El pago con tarjeta tiene 5% de recargo. Sin recargo pagando por <a href="#pagos">Yape o transferencia</a>.</p>
+  </div>
+</section>
+
+<!-- ============ FORMAS DE PAGO ============ -->
+<section class="pagos" id="pagos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Formas de pago</div>
+      <h2>Elige cómo pagar</h2>
+      <p>Con tarjeta el pago es inmediato y tiene 5% de recargo. Por Yape o transferencia no hay recargo: nos envías tu comprobante por WhatsApp y activamos tu plan.</p>
+    </div>
+    <div class="metodos-pago">
+      <div class="metodo-pago">
+        <div class="ic">💳</div>
+        <h3>Tarjeta</h3>
+        <span class="tag con">+5% de recargo</span>
+        <p>Pago inmediato y seguro (Culqui) con el botón de tu plan.</p>
+      </div>
+      <div class="metodo-pago">
+        <div class="ic">📱</div>
+        <h3>Yape</h3>
+        <span class="tag sin">Sin recargo</span>
+        <p class="dato">919 151 237</p>
+        <p>Verifica que aparezca AJL Nutrición al yapear.</p>
+      </div>
+      <div class="metodo-pago">
+        <div class="ic">🏦</div>
+        <h3>Transferencia BCP</h3>
+        <span class="tag sin">Sin recargo</span>
+        <p>Cuenta corriente</p>
+        <p class="dato">193-91104808-0-57</p>
+        <p>CCI: <span class="dato" style="font-size:.95rem">19391104808057</span></p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:26px">
+      <a class="btn btn-wa" href="https://wa.me/51919151237?text=Hola!%20Ya%20pagu%C3%A9%20por%20Yape%2Ftransferencia%2C%20les%20env%C3%ADo%20mi%20comprobante">💬 Ya pagué, enviar comprobante</a>
+    </div>
   </div>
 </section>
 
@@ -600,6 +653,10 @@
     <details>
       <summary>¿Cómo se aplican los descuentos?</summary>
       <p>15% en los planes mensuales (Acompañamiento, Constancia y Transformación) y 20% en los planes de 3 y 6 meses seguidos. El plan Básico mantiene su precio regular por ser el plan de entrada.</p>
+    </details>
+    <details>
+      <summary>¿Cómo puedo pagar? ¿Hay recargo?</summary>
+      <p>Con tarjeta el pago es inmediato y tiene un 5% de recargo (procesado por Culqui). Por Yape (919 151 237) o transferencia BCP no hay recargo: pagas, nos envías tu comprobante por WhatsApp y activamos tu plan. Encuentra los datos en la sección <a href="#pagos">Formas de pago</a>.</p>
     </details>
     <details>
       <summary>¿Atienden presencial o virtual?</summary>
