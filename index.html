@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AJL Nutrición · CyberDays · 15% y 20% OFF</title>
+<meta name="description" content="CyberDays AJL: 15% OFF en planes mensuales y 20% OFF en paquetes de 3 y 6 meses. Aprende a comer sin renunciar a tu vida. Solo hasta el domingo." />
+
+<!-- Open Graph -->
+<meta property="og:title" content="AJL Nutrición · CyberDays · 15% y 20% OFF" />
+<meta property="og:description" content="15% OFF en planes mensuales y 20% OFF en paquetes. Aprende a comer con conocimiento y método, no con miedo ni culpa. Solo hasta el domingo." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    /* Verde AJL: cercano y confiable. Terracota cálido: empatía y calidez humana. */
+    --verde:#2F6E52;
+    --verde-osc:#173C2C;
+    --verde-claro:#E9F1EB;
+    --dorado:#D68A5C;        /* acento terracota (empatía) */
+    --dorado-osc:#BE6E42;    /* terracota oscuro para hover / CTA */
+    --dorado-claro:#F6E5D9;
+    --crema:#FBF7F1;
+    --texto:#20302A;
+    --gris:#5E6B63;
+    --blanco:#ffffff;
+    --sombra:0 10px 30px rgba(23,60,44,.10);
+    --sombra-fuerte:0 18px 50px rgba(23,60,44,.18);
+    --radio:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    color:var(--texto);
+    background:var(--crema);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.font-head{font-family:'Fraunces',Georgia,serif;line-height:1.12;letter-spacing:-.01em;font-weight:600}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  section{padding:64px 0}
+  a{text-decoration:none;color:inherit}
+  img{max-width:100%;display:block}
+
+  /* ---------- Barra superior ---------- */
+  .topbar{
+    background:var(--verde-osc);
+    color:#fff;text-align:center;
+    font-size:.9rem;font-weight:600;
+    padding:10px 16px;letter-spacing:.3px;
+  }
+  .topbar strong{color:var(--dorado-claro)}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:
+      radial-gradient(1200px 500px at 80% -10%, rgba(214,138,92,.20), transparent 60%),
+      linear-gradient(160deg,var(--verde-osc) 0%, var(--verde) 100%);
+    color:#fff;
+    text-align:center;
+    padding:56px 0 72px;
+    position:relative;
+    overflow:hidden;
+  }
+  /* Foto del equipo, translúcida, detrás del contenido */
+  .hero::before{
+    content:"";
+    position:absolute;inset:0;
+    background:url('assets/equipo.jpg') center 30% / cover no-repeat;
+    opacity:.30;
+    mix-blend-mode:luminosity;
+    z-index:0;
+  }
+  /* Velo verde para asegurar legibilidad del texto sobre la foto */
+  .hero::after{
+    content:"";
+    position:absolute;inset:0;
+    background:linear-gradient(160deg,rgba(23,60,44,.62) 0%, rgba(47,110,82,.5) 100%);
+    z-index:0;
+  }
+  .hero .wrap{position:relative;z-index:1}
+
+  /* Bloque de oferta grande (recalca 15% y 20%) */
+  .oferta{
+    display:flex;align-items:stretch;justify-content:center;
+    margin:24px auto 4px;max-width:520px;
+    background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);
+    border-radius:16px;overflow:hidden;backdrop-filter:blur(6px);
+  }
+  .oferta-item{flex:1;padding:14px 14px;color:inherit;text-decoration:none;cursor:pointer;transition:background .15s ease}
+  .oferta-item:hover{background:rgba(255,255,255,.12)}
+  .oferta .pct{display:block;font-family:'Inter';font-weight:800;font-size:2.3rem;color:var(--dorado);line-height:1}
+  .oferta .pct-t{display:block;font-size:.8rem;opacity:.92;margin-top:5px}
+  .oferta-sep{width:1px;background:rgba(255,255,255,.22)}
+  .brand{
+    font-family:'Fraunces',serif;font-weight:600;font-size:1.2rem;
+    letter-spacing:0;opacity:.95;margin-bottom:20px;
+    display:inline-flex;align-items:center;gap:8px;
+  }
+  .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--dorado)}
+  .badge{
+    display:inline-block;background:var(--dorado);color:var(--verde-osc);
+    font-family:'Inter';font-weight:700;font-size:.82rem;
+    padding:7px 16px;border-radius:999px;letter-spacing:1px;
+    text-transform:uppercase;margin-bottom:18px;
+  }
+  .hero h1{
+    font-size:clamp(2.1rem,6vw,3.6rem);font-weight:800;
+    margin-bottom:14px;
+  }
+  .hero h1 .hl{color:var(--dorado)}
+  .hero p.sub{
+    font-size:clamp(1.02rem,2.4vw,1.25rem);
+    max-width:640px;margin:0 auto 10px;opacity:.95;
+  }
+  .hero p.fechas{font-size:.95rem;opacity:.8;margin-bottom:26px}
+
+  /* ---------- Countdown ---------- */
+  .countdown{
+    display:flex;justify-content:center;gap:12px;margin:22px 0 30px;
+    flex-wrap:wrap;
+  }
+  .cd-box{
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.18);
+    backdrop-filter:blur(6px);
+    border-radius:14px;
+    padding:12px 18px;min-width:74px;
+  }
+  .cd-box .num{font-family:'Inter';font-weight:800;font-size:1.9rem;display:block;line-height:1}
+  .cd-box .lbl{font-size:.72rem;text-transform:uppercase;letter-spacing:1px;opacity:.85;margin-top:4px}
+
+  /* ---------- Botones ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    font-family:'Inter';font-weight:700;font-size:1.05rem;
+    padding:15px 30px;border-radius:999px;cursor:pointer;border:none;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-primary{background:var(--dorado);color:#fff;box-shadow:0 8px 22px rgba(214,138,92,.38)}
+  .btn-primary:hover{transform:translateY(-2px);background:var(--dorado-osc);box-shadow:0 12px 28px rgba(214,138,92,.5)}
+  .btn-wa{background:#25D366;color:#fff;box-shadow:0 8px 22px rgba(37,211,102,.35)}
+  .btn-wa:hover{transform:translateY(-2px)}
+  .btn-outline{background:transparent;border:2px solid rgba(255,255,255,.6);color:#fff}
+  .btn-ghost{background:var(--verde);color:#fff}
+  .btn-ghost:hover{transform:translateY(-2px)}
+
+  /* ---------- Confianza / stats ---------- */
+  .trust{background:#fff;border-top:1px solid #eee;border-bottom:1px solid #eee}
+  .trust .wrap{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;padding-top:34px;padding-bottom:34px}
+  .stat{text-align:center}
+  .stat .n{font-family:'Inter';font-weight:800;font-size:2rem;color:var(--verde);line-height:1.1}
+  .stat .n.sm{font-size:1.25rem}
+  .stat .t{font-size:.9rem;color:var(--gris)}
+
+  /* ---------- Secciones títulos ---------- */
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 44px}
+  .sec-head .eyebrow{
+    color:var(--dorado);font-family:'Inter';font-weight:700;
+    text-transform:uppercase;letter-spacing:2px;font-size:.82rem;margin-bottom:10px;
+  }
+  .sec-head h2{font-size:clamp(1.7rem,4vw,2.5rem);font-weight:700;margin-bottom:12px;color:var(--verde-osc)}
+  .sec-head p{color:var(--gris);font-size:1.05rem}
+
+  /* ---------- Dolor / promesa ---------- */
+  .promesa{background:#fff}
+  .promesa .card{
+    background:var(--verde-claro);border-radius:var(--radio);
+    padding:36px;text-align:center;box-shadow:var(--sombra);
+  }
+  .promesa .card p{font-size:1.15rem;color:var(--verde-osc);font-weight:500}
+  .promesa .card .quote{font-family:'Inter';font-weight:600;font-size:1.35rem;margin-bottom:12px}
+
+  /* ---------- Planes ---------- */
+  .planes-toggle{text-align:center;margin-bottom:36px}
+  .grupo-label{
+    display:inline-block;background:var(--dorado-claro);color:var(--verde-osc);
+    font-family:'Inter';font-weight:700;padding:8px 20px;border-radius:999px;
+    font-size:.9rem;margin-bottom:8px;
+  }
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+  .plan{
+    background:#fff;border-radius:var(--radio);padding:28px 24px;
+    box-shadow:var(--sombra);border:2px solid transparent;
+    display:flex;flex-direction:column;position:relative;transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .plan:hover{transform:translateY(-4px);box-shadow:var(--sombra-fuerte)}
+  .plan.pop{border-color:var(--dorado);box-shadow:var(--sombra-fuerte)}
+  .plan .tag-pop{
+    position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+    background:var(--dorado);color:var(--verde-osc);font-family:'Inter';font-weight:700;
+    font-size:.75rem;text-transform:uppercase;letter-spacing:1px;padding:5px 14px;border-radius:999px;white-space:nowrap;
+  }
+  .plan .off-badge{
+    align-self:flex-start;background:var(--dorado);color:#fff;
+    font-family:'Inter';font-weight:800;font-size:.9rem;letter-spacing:.3px;
+    padding:6px 14px;border-radius:999px;margin-bottom:12px;
+  }
+  .plan .off-badge.neutral{background:var(--verde-claro);color:var(--verde);font-weight:700;font-size:.78rem}
+  .plan.pop .off-badge{background:var(--dorado)}
+  .plan h3{font-size:1.35rem;color:var(--verde-osc);margin-bottom:2px}
+  .plan .desc{font-size:.88rem;color:var(--gris);margin-bottom:16px;min-height:38px}
+  .plan .precio{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:2px}
+  .plan .antes{color:#b0b0b0;text-decoration:line-through;font-size:1.05rem}
+  .plan .ahora{font-family:'Inter';font-weight:800;font-size:2.1rem;color:var(--verde-osc)}
+  .plan .periodo{font-size:.85rem;color:var(--gris);margin-bottom:14px}
+  .plan .ahorro{font-size:.82rem;color:var(--dorado);font-weight:700;margin-bottom:16px}
+  .plan ul{list-style:none;margin-bottom:22px;flex:1}
+  .plan ul li{font-size:.9rem;padding:6px 0 6px 26px;position:relative;color:var(--texto)}
+  .plan ul li::before{content:"✓";position:absolute;left:0;color:var(--verde);font-weight:800}
+  .plan .btn{width:100%}
+  .plan .alt-link{display:block;text-align:center;margin-top:10px;font-size:.8rem;color:var(--gris);text-decoration:underline}
+
+  .nota-planes{text-align:center;color:var(--gris);font-size:.88rem;margin-top:26px}
+
+  /* ---------- Método ---------- */
+  .metodo{background:var(--verde-osc);color:#fff}
+  .metodo .sec-head h2{color:#fff}
+  .metodo .sec-head p{color:rgba(255,255,255,.8)}
+  .metodo .sec-head .eyebrow{color:var(--dorado)}
+  .pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+  .paso{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radio);padding:26px}
+  .paso .n{font-family:'Inter';font-weight:800;font-size:1.6rem;color:var(--dorado);margin-bottom:8px}
+  .paso h3{font-size:1.1rem;margin-bottom:8px}
+  .paso p{font-size:.92rem;color:rgba(255,255,255,.82)}
+
+  /* ---------- Testimonios ---------- */
+  .testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+  .testi{background:#fff;border-radius:var(--radio);padding:26px;box-shadow:var(--sombra)}
+  .testi .stars{color:var(--dorado);margin-bottom:10px;font-size:1.05rem}
+  .testi p{font-size:.96rem;margin-bottom:16px;color:var(--texto)}
+  .testi .who{display:flex;align-items:center;gap:12px}
+  .testi .av{width:44px;height:44px;border-radius:50%;background:var(--verde-claro);color:var(--verde);
+    display:flex;align-items:center;justify-content:center;font-family:'Inter';font-weight:700}
+  .testi .who .nm{font-weight:700;font-size:.95rem}
+  .testi .who .rl{font-size:.8rem;color:var(--gris)}
+
+  /* ---------- Carrusel de testimonios (video) ---------- */
+  .testimonios{overflow:hidden}
+  .testi-carousel{
+    position:relative;width:100%;overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+    mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+  }
+  .testi-track{
+    display:flex;gap:20px;width:max-content;
+    animation:scroll-testi 60s linear infinite;
+  }
+  .testi-carousel:hover .testi-track{animation-play-state:paused}
+  .testi-track.paused{animation-play-state:paused}
+  @keyframes scroll-testi{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  .tcard{
+    position:relative;flex:0 0 auto;width:230px;aspect-ratio:9/16;
+    border-radius:18px;overflow:hidden;background:#000;
+    box-shadow:var(--sombra);cursor:pointer;
+  }
+  .tcard video{width:100%;height:100%;object-fit:cover;display:block;background:#000}
+  .tcard .play{
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.45));
+    transition:opacity .2s ease;
+  }
+  .tcard.playing .play{opacity:0;pointer-events:none}
+  .tcard .play .circle{
+    width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.92);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 6px 18px rgba(0,0,0,.3);
+  }
+  .tcard .play .circle::after{
+    content:"";margin-left:4px;border-style:solid;border-width:11px 0 11px 18px;
+    border-color:transparent transparent transparent var(--verde-osc);
+  }
+  .tcard .name{
+    position:absolute;left:0;right:0;bottom:0;padding:26px 14px 12px;color:#fff;
+    background:linear-gradient(0deg,rgba(0,0,0,.75),transparent);
+    font-family:'Inter';font-weight:600;font-size:.95rem;pointer-events:none;
+  }
+  .tcard .name small{display:block;font-family:'Inter';font-weight:400;opacity:.85;font-size:.78rem}
+  .nota-testi{text-align:center;color:var(--gris);font-size:.88rem;margin-top:26px;padding:0 20px}
+
+  /* ---------- FAQ ---------- */
+  .faq{background:#fff}
+  .faq details{border:1px solid #e8e5dd;border-radius:14px;padding:4px 20px;margin-bottom:14px;background:var(--crema)}
+  .faq summary{font-family:'Inter';font-weight:600;cursor:pointer;padding:16px 0;list-style:none;
+    display:flex;justify-content:space-between;align-items:center;color:var(--verde-osc)}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-size:1.5rem;color:var(--dorado);font-weight:700}
+  .faq details[open] summary::after{content:"−"}
+  .faq details p{padding:0 0 18px;color:var(--gris);font-size:.95rem}
+
+  /* ---------- CTA final ---------- */
+  .cta-final{
+    background:linear-gradient(160deg,var(--dorado) 0%, var(--dorado-osc) 100%);
+    color:#fff;text-align:center;
+  }
+  .cta-final h2{font-size:clamp(1.8rem,5vw,2.7rem);margin-bottom:14px;color:#fff}
+  .cta-final p{font-size:1.1rem;max-width:600px;margin:0 auto 26px;font-weight:500}
+  .cta-final .btn-wa{font-size:1.15rem;padding:17px 36px}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--verde-osc);color:rgba(255,255,255,.75);text-align:center;padding:40px 20px;font-size:.9rem}
+  footer .brand{font-family:'Fraunces',serif;color:#fff;font-size:1.15rem;margin-bottom:8px}
+  footer a{color:var(--dorado-claro);font-weight:600}
+  footer .dir{margin-top:10px;font-size:.82rem;opacity:.7}
+
+  /* ---------- Sticky WhatsApp ---------- */
+  .fab{
+    position:fixed;bottom:22px;right:22px;z-index:50;
+    background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;font-size:1.9rem;
+    box-shadow:0 8px 24px rgba(37,211,102,.5);transition:transform .15s ease;
+  }
+  .fab:hover{transform:scale(1.08)}
+
+  @media(max-width:600px){
+    section{padding:48px 0}
+    .trust .wrap{gap:26px}
+    .hero{padding:40px 0 56px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ BARRA SUPERIOR ============ -->
+<div class="topbar">⚡ <strong>CyberDays AJL</strong> · 15% OFF en planes mensuales y 20% OFF en paquetes · Solo hasta el domingo</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span> AJL Nutrición</div>
+    <div class="badge">⚡ CyberDays · solo hasta el domingo</div>
+    <h1>Sé más saludable<br><span class="hl">sin dejar de disfrutar tu vida.</span></h1>
+    <p class="sub">Aprende a comer con conocimiento y método, no con miedo ni culpa. Nutrición construida sobre tu vida real: tus rutinas, tus restaurantes, tus emociones.</p>
+
+    <div class="oferta">
+      <a class="oferta-item" href="#planes"><span class="pct">15% OFF</span><span class="pct-t">en planes mensuales</span></a>
+      <div class="oferta-sep"></div>
+      <a class="oferta-item" href="#paquetes"><span class="pct">20% OFF</span><span class="pct-t">en paquetes de 3 y 6 meses</span></a>
+    </div>
+    <p class="fechas">⏰ La promo termina este domingo a la medianoche</p>
+
+    <div class="countdown" id="countdown" aria-label="Cuenta regresiva de la promoción">
+      <div class="cd-box"><span class="num" id="cd-d">--</span><span class="lbl">Días</span></div>
+      <div class="cd-box"><span class="num" id="cd-h">--</span><span class="lbl">Horas</span></div>
+      <div class="cd-box"><span class="num" id="cd-m">--</span><span class="lbl">Min</span></div>
+      <div class="cd-box"><span class="num" id="cd-s">--</span><span class="lbl">Seg</span></div>
+    </div>
+
+    <a class="btn btn-primary" href="#planes">Ver planes con descuento</a>
+  </div>
+</header>
+
+<!-- ============ CONFIANZA ============ -->
+<div class="trust">
+  <div class="wrap">
+    <div class="stat"><div class="n">+1000</div><div class="t">personas acompañadas</div></div>
+    <div class="stat"><div class="n sm">Presencial o virtual</div><div class="t">Lince, Lima</div></div>
+    <div class="stat"><div class="n sm">Sesiones de 1 hora</div><div class="t">para escucharte de verdad</div></div>
+    <div class="stat"><div class="n">100%</div><div class="t">plan sobre tu vida real</div></div>
+  </div>
+</div>
+
+<!-- ============ TESTIMONIOS (carrusel de video) ============ -->
+<section class="testimonios">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Historias reales</div>
+      <h2>Aprendieron a comer. Sin renunciar a su vida.</h2>
+      <p>Testimonios reales de pacientes. Toca cualquier video para reproducirlo.</p>
+    </div>
+  </div>
+
+  <div class="testi-carousel">
+    <div class="testi-track" id="testiTrack">
+      <div class="tcard"><video src="testimonios/belinda.mp4" poster="testimonios/belinda.jpg" preload="none" playsinline></video><div class="play"><div class="circle"></div></div><div class="name">Belinda Estrada<small>Paciente AJL</small></div></div>
+      <div class="tcard"><video src="testimonios/jose-terrones.mp4" poster="testimonios/jose-terrones.jpg" preload="none" playsinline></video><div class="play"><div class="circle"></div></div><div class="name">Jose Terrones<small>Paciente AJL</small></div></div>
+      <div class="tcard"><video src="testimonios/joseph.mp4" poster="testimonios/joseph.jpg" preload="none" playsinline></video><div class="play"><div class="circle"></div></div><div class="name">Joseph Tarrillo<small>Paciente AJL</small></div></div>
+      <div class="tcard"><video src="testimonios/kiabell.mp4" poster="testimonios/kiabell.jpg" preload="none" playsinline></video><div class="play"><div class="circle"></div></div><div class="name">Kiabell Lino<small>Paciente AJL</small></div></div>
+      <div class="tcard"><video src="testimonios/lucia.mp4" poster="testimonios/lucia.jpg" preload="none" playsinline></video><div class="play"><div class="circle"></div></div><div class="name">Lucía Sifuentes<small>Paciente AJL</small></div></div>
+      <div class="tcard"><video src="testimonios/maria-escajadillo.mp4" poster="testimonios/maria-escajadillo.jpg" preload="none" playsinline></video><div class="play"><div class="circle"></div></div><div class="name">María Escajadillo<small>Paciente AJL</small></div></div>
+      <div class="tcard"><video src="testimonios/maria-guadalupe.mp4" poster="testimonios/maria-guadalupe.jpg" preload="none" playsinline></video><div class="play"><div class="circle"></div></div><div class="name">María Guadalupe<small>Paciente AJL</small></div></div>
+      <div class="tcard"><video src="testimonios/miriam.mp4" poster="testimonios/miriam.jpg" preload="none" playsinline></video><div class="play"><div class="circle"></div></div><div class="name">Miriam del Pilar<small>Paciente AJL</small></div></div>
+      <div class="tcard"><video src="testimonios/solange.mp4" poster="testimonios/solange.jpg" preload="none" playsinline></video><div class="play"><div class="circle"></div></div><div class="name">Solange Rivera<small>Paciente AJL</small></div></div>
+    </div>
+  </div>
+  <p class="nota-testi">Testimonios reales de pacientes de AJL Nutrición. Los resultados varían según cada persona.</p>
+</section>
+
+<!-- ============ PROMESA ============ -->
+<section class="promesa">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">La salud no se paga con tu vida</div>
+      <h2>No fallaste tú. Falló el plan.</h2>
+      <p>El problema nunca fue tu fuerza de voluntad: fueron los planes hechos para una vida ideal que no existe. La nutrición no es una ciencia restrictiva: es la ciencia de hacerte más saludable desde tu realidad, no contra ella.</p>
+    </div>
+    <div class="card">
+      <p class="quote">“En nutrición no hay bueno ni malo: hay decisiones que aportan a tu objetivo y decisiones que no.”</p>
+      <p>Sin pesar cada gramo, sin prohibir el pan, el arroz ni tus salidas. Aprendes a manejar porciones con tus manos, tazas y platos, mientras nosotros llevamos las cuentas por detrás. Reemplazamos el miedo y la culpa con conocimiento y método.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLANES MENSUALES ============ -->
+<section id="planes">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">CyberDays · 15% OFF</div>
+      <h2>Planes mensuales con 15% OFF</h2>
+      <p>Sesiones de una hora para conocerte y explicarte de verdad, no una consulta de 15 minutos con un plan impreso. El 15% se aplica a todos los planes mensuales.</p>
+    </div>
+
+    <div class="grid">
+
+      <!-- Básico (sin promo) -->
+      <div class="plan">
+        <span class="off-badge neutral">Plan de entrada</span>
+        <h3>Básico</h3>
+        <p class="desc">Claridad en una sola sesión.</p>
+        <div class="precio"><span class="ahora">S/250</span></div>
+        <div class="periodo">pago único</div>
+        <div class="ahorro">Precio regular</div>
+        <ul>
+          <li>1 sesión de estrategia</li>
+          <li>1 plan de nutrición personalizado</li>
+          <li>Diagnóstico de tus hábitos</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://express.culqi.com/pago/D1100F369A">Pagar S/250</a>
+      </div>
+
+      <!-- Acompañamiento -->
+      <div class="plan">
+        <span class="off-badge">−15% OFF</span>
+        <h3>Acompañamiento</h3>
+        <p class="desc">Tu primer paso, con soporte constante.</p>
+        <div class="precio"><span class="antes">S/320</span><span class="ahora">S/272</span></div>
+        <div class="periodo">al mes</div>
+        <div class="ahorro">Ahorras S/48</div>
+        <ul>
+          <li>Sesión de estrategia + plan</li>
+          <li>Seguimiento por WhatsApp</li>
+          <li>4 sesiones grupales al mes</li>
+          <li>Comunidad exclusiva</li>
+        </ul>
+        <a class="btn btn-primary" href="https://express.culqi.com/pago/ACC01F0005">Aprovechar 15% OFF</a>
+      </div>
+
+      <!-- Constancia (popular) -->
+      <div class="plan pop">
+        <span class="tag-pop">★ Más elegido</span>
+        <span class="off-badge">−15% OFF</span>
+        <h3>Constancia</h3>
+        <p class="desc">Acompañamiento continuo y medición.</p>
+        <div class="precio"><span class="antes">S/440</span><span class="ahora">S/374</span></div>
+        <div class="periodo">al mes</div>
+        <div class="ahorro">Ahorras S/66</div>
+        <ul>
+          <li>Todo lo de Acompañamiento</li>
+          <li>Sesión de seguimiento quincenal</li>
+          <li>Medición de composición corporal</li>
+          <li>Ajustes según tu adherencia</li>
+        </ul>
+        <a class="btn btn-primary" href="https://express.culqi.com/pago/6E81A425E1">Aprovechar 15% OFF</a>
+      </div>
+
+      <!-- Transformación -->
+      <div class="plan">
+        <span class="off-badge">−15% OFF</span>
+        <h3>Transformación</h3>
+        <p class="desc">Soporte semanal total y prioritario.</p>
+        <div class="precio"><span class="antes">S/600</span><span class="ahora">S/510</span></div>
+        <div class="periodo">al mes</div>
+        <div class="ahorro">Ahorras S/90</div>
+        <ul>
+          <li>2 sesiones de estrategia + planes</li>
+          <li>2 seguimientos al mes</li>
+          <li>Medición de composición corporal</li>
+          <li>Atención prioritaria</li>
+        </ul>
+        <a class="btn btn-primary" href="https://express.culqi.com/pago/BC2BA8C6FD">Aprovechar 15% OFF</a>
+      </div>
+
+    </div>
+
+    <p class="nota-planes">El plan Básico mantiene su precio regular por ser el plan de entrada. La evaluación inicial cuesta S/80 y se descuenta de tu primer mes si continúas.</p>
+  </div>
+</section>
+
+<!-- ============ PLANES 3 y 6 MESES ============ -->
+<section id="paquetes" style="background:var(--verde-claro)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">CyberDays · 20% OFF</div>
+      <h2>Paquetes de 3 y 6 meses con 20% OFF</h2>
+      <p>El mayor descuento está en comprometerte. Aprender a comer toma tiempo, y la constancia es lo que lo vuelve tuyo para siempre.</p>
+    </div>
+
+    <div class="grid">
+
+      <!-- Acompañamiento 3/6 -->
+      <div class="plan">
+        <span class="off-badge">−20% OFF</span>
+        <h3>Acompañamiento</h3>
+        <p class="desc">Ideal para arrancar con impulso.</p>
+        <div class="precio"><span class="antes">S/960</span><span class="ahora">S/768</span></div>
+        <div class="periodo">3 meses · S/256/mes</div>
+        <div class="ahorro">Ahorras S/192</div>
+        <ul>
+          <li><strong>6 meses:</strong> <span class="antes" style="font-size:.95rem">S/1.920</span> → <strong>S/1.536</strong></li>
+          <li>Equivale a S/256/mes</li>
+          <li>Ahorras S/384 en total</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://express.culqi.com/pago/1D36FBDED2">Aprovechar 20% OFF · 3 meses</a>
+        <a class="alt-link" href="https://wa.me/51919151237?text=Hola!%20Quiero%20la%20promo%20-20%25%20del%20plan%20Acompa%C3%B1amiento%20por%206%20meses%20(S%2F1.536)">¿Prefieres 6 meses? Escríbenos</a>
+      </div>
+
+      <!-- Constancia 3/6 (popular) -->
+      <div class="plan pop">
+        <span class="tag-pop">★ Mejor valor</span>
+        <span class="off-badge">−20% OFF</span>
+        <h3>Constancia</h3>
+        <p class="desc">El equilibrio perfecto de soporte y resultado.</p>
+        <div class="precio"><span class="antes">S/1.320</span><span class="ahora">S/1.056</span></div>
+        <div class="periodo">3 meses · S/352/mes</div>
+        <div class="ahorro">Ahorras S/264</div>
+        <ul>
+          <li><strong>6 meses:</strong> <span class="antes" style="font-size:.95rem">S/2.640</span> → <strong>S/2.112</strong></li>
+          <li>Equivale a S/352/mes</li>
+          <li>Ahorras S/528 en total</li>
+        </ul>
+        <a class="btn btn-primary" href="https://express.culqi.com/pago/6A6963AFC1">Aprovechar 20% OFF · 3 meses</a>
+        <a class="alt-link" href="https://wa.me/51919151237?text=Hola!%20Quiero%20la%20promo%20-20%25%20del%20plan%20Constancia%20por%206%20meses%20(S%2F2.112)">¿Prefieres 6 meses? Escríbenos</a>
+      </div>
+
+      <!-- Transformación 3/6 -->
+      <div class="plan">
+        <span class="off-badge">−20% OFF</span>
+        <h3>Transformación</h3>
+        <p class="desc">Para quien quiere el cambio completo.</p>
+        <div class="precio"><span class="antes">S/1.800</span><span class="ahora">S/1.440</span></div>
+        <div class="periodo">3 meses · S/480/mes</div>
+        <div class="ahorro">Ahorras S/360</div>
+        <ul>
+          <li><strong>6 meses:</strong> <span class="antes" style="font-size:.95rem">S/3.600</span> → <strong>S/2.880</strong></li>
+          <li>Equivale a S/480/mes</li>
+          <li>Ahorras S/720 en total</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://express.culqi.com/pago/CD0FE76E63">Aprovechar 20% OFF · 3 meses</a>
+        <a class="alt-link" href="https://wa.me/51919151237?text=Hola!%20Quiero%20la%20promo%20-20%25%20del%20plan%20Transformaci%C3%B3n%20por%206%20meses%20(S%2F2.880)">¿Prefieres 6 meses? Escríbenos</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ MÉTODO ============ -->
+<section class="metodo">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Cómo trabajamos</div>
+      <h2>Te enseñamos a comer. Y te acompañamos hasta que decidas solo.</h2>
+      <p>Sin dietas imposibles. El plan se adapta a ti, no tú al plan.</p>
+    </div>
+    <div class="pasos">
+      <div class="paso"><div class="n">01</div><h3>Estructuramos tu rutina</h3><p>Partimos de cómo vives realmente: tu chamba, tus salidas, tus restaurantes. No de un ideal inalcanzable.</p></div>
+      <div class="paso"><div class="n">02</div><h3>Planificamos juntos</h3><p>Cada semana, un plan colaborativo hecho con lo que de verdad comes.</p></div>
+      <div class="paso"><div class="n">03</div><h3>Porciones visibles</h3><p>Manejas cantidades con tus manos, tazas y platos. Sin pesar cada gramo.</p></div>
+      <div class="paso"><div class="n">04</div><h3>Nosotros llevamos las cuentas</h3><p>El cálculo corre por nuestra cuenta, no por la tuya. Tú decides, nosotros hacemos los números.</p></div>
+      <div class="paso"><div class="n">05</div><h3>Acompañamiento cercano</h3><p>Estamos contigo entre sesiones, no solo en la consulta. Un desvío es información, nunca un reproche.</p></div>
+      <div class="paso"><div class="n">06</div><h3>Dirección sobre perfección</h3><p>Lo que manda es la dirección de la semana, no el día perfecto. Ajustamos y avanzamos.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq">
+  <div class="wrap" style="max-width:760px">
+    <div class="sec-head">
+      <div class="eyebrow">Dudas frecuentes</div>
+      <h2>Antes de empezar</h2>
+    </div>
+    <details open>
+      <summary>¿Es otra dieta más?</summary>
+      <p>No. No te damos una dieta para seguir a ciegas: te enseñamos a comer para que, con el tiempo, decidas por ti mismo, ya sea en un restaurante, de viaje o un día de estrés, sin culpa y sin depender de nadie.</p>
+    </details>
+    <details>
+      <summary>¿Voy a tener que dejar el pan, el arroz o mis salidas?</summary>
+      <p>No. Partimos de lo que realmente comes y de dónde comes. No hay alimentos prohibidos ni "buenos y malos": hay decisiones que aportan a tu objetivo y otras que no. Nuestro trabajo es que el plan funcione con tu vida, no contra ella.</p>
+    </details>
+    <details>
+      <summary>¿Hasta cuándo dura la promoción?</summary>
+      <p>Es una promo por CyberDays, por tiempo limitado: termina este domingo a la medianoche. Cuando el contador llega a cero, los precios vuelven a su valor regular. Reserva escribiéndonos por WhatsApp.</p>
+    </details>
+    <details>
+      <summary>¿Cómo se aplican los descuentos?</summary>
+      <p>15% en los planes mensuales (Acompañamiento, Constancia y Transformación) y 20% en los planes de 3 y 6 meses seguidos. El plan Básico mantiene su precio regular por ser el plan de entrada.</p>
+    </details>
+    <details>
+      <summary>¿Atienden presencial o virtual?</summary>
+      <p>Ambos. Presencial en nuestro consultorio en Lince, Lima, y virtual desde cualquier lugar del país.</p>
+    </details>
+    <details>
+      <summary>¿Qué incluye la evaluación de S/80?</summary>
+      <p>Una sesión personalizada con diagnóstico completo de tus hábitos y composición corporal, tiempo real para escucharte y una dirección clara. Si continúas, esos S/80 se descuentan de tu primer mes.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="cta-final">
+  <div class="wrap">
+    <h2>Aprende a comer de una vez. Sin dietas eternas, sin culpa.</h2>
+    <p>Los CyberDays terminan este domingo. Reserva tu plan con descuento y empieza esta semana.</p>
+    <a class="btn btn-wa" href="https://wa.me/51919151237?text=Hola!%20Quiero%20aprovechar%20la%20promo%20CyberDays%20de%20AJL%20Nutrici%C3%B3n">💬 Escríbenos por WhatsApp</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="brand">AJL Nutrición</div>
+  <div>Enseñar a comer y acompañarte, hasta que decidas solo · Estructura para tu vida real</div>
+  <div style="margin-top:12px">
+    <a href="https://wa.me/51919151237">WhatsApp: +51 919 151 237</a>
+  </div>
+  <div class="dir">Av. Almirante Manuel Villavicencio 1461, Lince, Lima · Presencial y virtual</div>
+</footer>
+
+<!-- Sticky WhatsApp -->
+<a class="fab" href="https://wa.me/51919151237?text=Hola!%20Vengo%20de%20la%20promo%20CyberDays%20de%20AJL" aria-label="WhatsApp">💬</a>
+
+<script>
+  // ====== CUENTA REGRESIVA ======
+  // Cambia esta fecha para ajustar el fin de la promo (formato: AÑO, MES-1, DÍA, HORA, MIN)
+  const FIN_PROMO = new Date(2026, 6, 12, 23, 59, 59); // domingo 12 de julio 2026, fin del día (CyberDays)
+
+  function tick(){
+    const ahora = new Date();
+    let diff = Math.floor((FIN_PROMO - ahora) / 1000);
+    if (diff < 0) diff = 0;
+    const d = Math.floor(diff / 86400);
+    const h = Math.floor((diff % 86400) / 3600);
+    const m = Math.floor((diff % 3600) / 60);
+    const s = diff % 60;
+    const pad = n => String(n).padStart(2,'0');
+    document.getElementById('cd-d').textContent = pad(d);
+    document.getElementById('cd-h').textContent = pad(h);
+    document.getElementById('cd-m').textContent = pad(m);
+    document.getElementById('cd-s').textContent = pad(s);
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  // ====== CARRUSEL DE TESTIMONIOS ======
+  const track = document.getElementById('testiTrack');
+  if (track) {
+    // Duplicar tarjetas para lograr el desplazamiento infinito y sin cortes
+    const originales = Array.from(track.children);
+    originales.forEach(card => track.appendChild(card.cloneNode(true)));
+
+    let reproduciendo = null;
+    track.querySelectorAll('.tcard').forEach(card => {
+      const video = card.querySelector('video');
+      card.addEventListener('click', () => {
+        // Si este ya se reproduce, pausar y reanudar la cinta
+        if (reproduciendo === video && !video.paused) {
+          video.pause();
+          card.classList.remove('playing');
+          track.classList.remove('paused');
+          reproduciendo = null;
+          return;
+        }
+        // Pausar cualquier otro video en reproducción
+        if (reproduciendo) {
+          reproduciendo.pause();
+          reproduciendo.closest('.tcard').classList.remove('playing');
+        }
+        video.muted = false;
+        video.currentTime = 0;
+        video.play();
+        card.classList.add('playing');
+        track.classList.add('paused'); // detener la cinta mientras se ve el testimonio
+        reproduciendo = video;
+      });
+      video.addEventListener('ended', () => {
+        card.classList.remove('playing');
+        track.classList.remove('paused');
+        if (reproduciendo === video) reproduciendo = null;
+      });
+    });
+  }
+</script>
+</body>
+</html>
