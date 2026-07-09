@@ -90,7 +90,17 @@
     display:flex;align-items:stretch;justify-content:center;gap:16px;
     margin:26px auto 6px;max-width:560px;
     background:transparent;border:0;
+    transform-origin:center;
+    animation:latido 2.4s ease-in-out infinite;
   }
+  @keyframes latido{
+    0%,100%{transform:scale(1)}
+    14%{transform:scale(1.045)}
+    28%{transform:scale(1)}
+    42%{transform:scale(1.045)}
+    56%{transform:scale(1)}
+  }
+  @media(prefers-reduced-motion:reduce){ .oferta{animation:none} }
   .oferta-item{
     flex:1;padding:20px 16px 16px;color:#fff;text-decoration:none;cursor:pointer;
     background:linear-gradient(155deg,var(--dorado) 0%, var(--dorado-osc) 100%);
