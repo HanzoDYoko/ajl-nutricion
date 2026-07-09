@@ -232,6 +232,19 @@
   .metodo-pago p{font-size:.92rem;color:var(--texto);margin-bottom:4px}
   .metodo-pago .dato{font-family:'Inter';font-weight:800;color:var(--verde-osc);font-size:1.05rem;letter-spacing:.3px}
 
+  /* ---------- Pasos post-pago ---------- */
+  .pasos-pago{max-width:720px;margin:48px auto 0}
+  .pasos-pago .titulo{text-align:center;font-size:1.3rem;color:var(--verde-osc);margin-bottom:8px}
+  .paso-pago{display:flex;gap:18px;padding:22px 0;border-top:1px solid #ece7de}
+  .paso-pago .num{flex:0 0 auto;width:38px;height:38px;border-radius:50%;background:var(--verde-osc);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Inter';font-weight:800}
+  .paso-pago .cont{flex:1}
+  .paso-pago h3{font-size:1.12rem;color:var(--verde-osc);margin-bottom:6px}
+  .paso-pago p{font-size:.95rem;color:var(--texto);margin-bottom:6px}
+  .paso-pago .btn{margin-top:8px}
+  .aviso-horario{background:var(--dorado-claro);border-left:4px solid var(--dorado);border-radius:8px;padding:12px 16px;font-size:.9rem;color:var(--verde-osc);font-weight:600;margin-top:8px}
+  .modalidad{font-size:.95rem;margin-top:2px}
+  .modalidad strong{color:var(--verde-osc)}
+
   /* ---------- Método ---------- */
   .metodo{background:var(--verde-osc);color:#fff}
   .metodo .sec-head h2{color:#fff}
@@ -623,8 +636,40 @@
         <p>CCI: <span class="dato" style="font-size:.95rem">19391104808057</span></p>
       </div>
     </div>
-    <div style="text-align:center;margin-top:26px">
-      <a class="btn btn-wa" href="https://wa.me/51919151237?text=Hola!%20Ya%20pagu%C3%A9%20por%20Yape%2Ftransferencia%2C%20les%20env%C3%ADo%20mi%20comprobante">💬 Ya pagué, enviar comprobante</a>
+    <div class="pasos-pago">
+      <p class="titulo font-head">¿Ya elegiste? Así completas tu inscripción</p>
+      <div class="paso-pago">
+        <div class="num">1</div>
+        <div class="cont">
+          <h3>Elige tu plan y paga</h3>
+          <p>Con tarjeta desde el botón de tu plan, o por Yape / transferencia (sin recargo) con los datos de arriba.</p>
+        </div>
+      </div>
+      <div class="paso-pago">
+        <div class="num">2</div>
+        <div class="cont">
+          <h3>Envía tu comprobante por WhatsApp</h3>
+          <p>Solo necesitamos una captura de pantalla de tu pago.</p>
+          <a class="btn btn-wa" href="https://wa.me/51919151237?text=Hola!%20Ya%20realic%C3%A9%20mi%20pago%2C%20les%20env%C3%ADo%20mi%20comprobante">Enviar comprobante por WhatsApp →</a>
+        </div>
+      </div>
+      <div class="paso-pago">
+        <div class="num">3</div>
+        <div class="cont">
+          <h3>Recibe tu link de inscripción</h3>
+          <p>Un asesor te contacta para completar tu registro y agendar tu primera sesión.</p>
+          <div class="aviso-horario">🕘 Horario de atención: lunes a sábado, de 9:00 a.m. a 8:00 p.m.</div>
+        </div>
+      </div>
+      <div class="paso-pago">
+        <div class="num">4</div>
+        <div class="cont">
+          <h3>¡Listo para tu primera sesión!</h3>
+          <p>Elige la modalidad que prefieras:</p>
+          <p class="modalidad">🏢 <strong>Presencial:</strong> Av. Almirante Manuel Villavicencio 1461, Lince, Lima</p>
+          <p class="modalidad">💻 <strong>Virtual:</strong> desde donde estés</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
